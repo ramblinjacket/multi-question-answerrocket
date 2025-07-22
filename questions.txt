@@ -1,0 +1,8 @@
+What are the top 5 sales regions by revenue?
+Show me monthly revenue trends for the last 12 months
+What is the average customer acquisition cost?
+Which products have the highest profit margins?
+What is the customer churn rate by region?
+What are the key performance indicators for Q4?
+Show me the conversion funnel metrics
+What is the average order value by channel?
