@@ -18,27 +18,52 @@ class QuestionResult:
 
 class MultiQuestionExecutor:
     def __init__(self, url: Optional[str] = None, token: Optional[str] = None):
+        self.copilot_id = None
         self.url = url or os.environ.get('AR_URL')
         self.token = token or os.environ.get('AR_TOKEN')
         
         if not self.url or not self.token:
             raise ValueError("AnswerRocket URL and token must be provided via parameters or AR_URL/AR_TOKEN environment variables")
     
-    @staticmethod
-    def load_questions_from_file(file_path: str) -> List[str]:
-        """Load questions from a text file, one question per line"""
+    def load_questions_from_file(self, file_path: str) -> List[str]:
+        """Load questions from a text file and extract copilot_id from header"""
+        questions = []
+        copilot_id = None
+        
         with open(file_path, 'r', encoding='utf-8') as file:
-            questions = [line.strip() for line in file if line.strip()]
+            for line in file:
+                line = line.strip()
+                if not line:
+                    continue
+                    
+                # Parse copilot_id from header
+                if line.startswith('# COPILOT_ID:'):
+                    copilot_id = line.split(':', 1)[1].strip()
+                    continue
+                    
+                # Skip other comments
+                if line.startswith('#'):
+                    continue
+                    
+                questions.append(line)
+        
+        if not copilot_id:
+            raise ValueError(f"No COPILOT_ID found in {file_path}. Add '# COPILOT_ID: your-copilot-id' to the top of the file.")
+        
+        self.copilot_id = copilot_id
         return questions
     
     def _create_client(self) -> AnswerRocketClient:
         return AnswerRocketClient(url=self.url, token=self.token)
     
     def _execute_single_question(self, question: str) -> QuestionResult:
+        if not self.copilot_id:
+            raise ValueError("No copilot_id set. Load questions from file first using load_questions_from_file().")
+            
         start_time = time.time()
         try:
             client = self._create_client()
-            result = client.chat.ask(question)
+            result = client.chat.ask_question(self.copilot_id, question)
             execution_time = time.time() - start_time
             
             return QuestionResult(

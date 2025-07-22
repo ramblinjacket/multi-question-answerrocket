@@ -1,3 +1,5 @@
+# COPILOT_ID: 7c3957d8-3160-46a8-8114-51fca7a42da3
+
 What are the top 5 sales regions by revenue?
 Show me monthly revenue trends for the last 12 months
 What is the average customer acquisition cost?
