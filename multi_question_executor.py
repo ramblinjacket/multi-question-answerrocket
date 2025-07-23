@@ -26,9 +26,10 @@ class MultiQuestionExecutor:
             raise ValueError("AnswerRocket URL and token must be provided via parameters or AR_URL/AR_TOKEN environment variables")
     
     def load_questions_from_file(self, file_path: str) -> List[str]:
-        """Load questions from a text file and extract copilot_id from header"""
+        """Load questions from a text file and extract copilot_id and max_workers from header"""
         questions = []
         copilot_id = None
+        max_workers = None
         
         with open(file_path, 'r', encoding='utf-8') as file:
             for line in file:
@@ -41,6 +42,14 @@ class MultiQuestionExecutor:
                     copilot_id = line.split(':', 1)[1].strip()
                     continue
                     
+                # Parse max_workers from header
+                if line.startswith('# MAX_WORKERS:'):
+                    try:
+                        max_workers = int(line.split(':', 1)[1].strip())
+                    except ValueError:
+                        raise ValueError(f"Invalid MAX_WORKERS value in {file_path}. Must be a number.")
+                    continue
+                    
                 # Skip other comments
                 if line.startswith('#'):
                     continue
@@ -51,6 +60,7 @@ class MultiQuestionExecutor:
             raise ValueError(f"No COPILOT_ID found in {file_path}. Add '# COPILOT_ID: your-copilot-id' to the top of the file.")
         
         self.copilot_id = copilot_id
+        self.max_workers = max_workers
         return questions
     
     def _create_client(self) -> AnswerRocketClient:
@@ -84,7 +94,7 @@ class MultiQuestionExecutor:
     
     def execute_questions_threaded(self, questions: List[str], max_workers: Optional[int] = None) -> List[QuestionResult]:
         if max_workers is None:
-            max_workers = min(len(questions), 10)
+            max_workers = self.max_workers if self.max_workers is not None else min(len(questions), 10)
         
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
             future_to_question = {

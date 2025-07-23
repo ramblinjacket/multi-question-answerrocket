@@ -1,10 +1,67 @@
-# COPILOT_ID: 7c3957d8-3160-46a8-8114-51fca7a42da3
+# COPILOT_ID: 01d51e8c-fcde-4f82-bc0d-4f788cfaf043
+# MAX_WORKERS: 5
 
-What are the top 5 sales regions by revenue?
-Show me monthly revenue trends for the last 12 months
-What is the average customer acquisition cost?
-Which products have the highest profit margins?
-What is the customer churn rate by region?
-What are the key performance indicators for Q4?
-Show me the conversion funnel metrics
-What is the average order value by channel?
+Whats the current price for Keytruda across the EU5?
+Whts the price of Mounjaro across the EU5
+Whats the price of moun
+what is the loss of exclusivity date for zytiga?
+What is the price of Ozempic in the EU5
+compare the price of rybelsus 1.5 mg and 3 mg across europe
+Compare the price of Keytruda and its key competitors across the EU5?
+where has Rybelsus 1.5mg published prices so far?
+Show me the price history for Keytruda in the EU5?
+What is the price of Ozempic in Germany?
+Whats the current price for Keytruda across the EU5?
+can you compare cost of treatment for cystaran and cystadrops
+what EU countries russia reference for IRP
+i want duration of all metastatic bladder cancer products in Japan and thier cost of duration
+i want duration of all bladder cancer product in Japan
+what is average duration of bladder cancer treatment in Japan
+i want to know duration data for all these products
+i want to focus on whole bladder cancer in Japan
+how to get average DOT of indication like bladder cancer
+catalogue of price types y pricing database
+Whats the current price for Opdivo across the EU5?
+Whats the price of keytruda and its key competitors across the eu5?
+Whats the current price for Opdivo across the EU5?
+whats the price of keytruda and its key competitors across the eu5?
+Whats the current price for Opdivo across the EU5?
+Whats the current price for Opdivo across the EU5?
+show me price trend of Keytruda in Germany for last 5 years, with events
+show me price trend of Keytruda in Germany for last year, with events
+When was the last price decrease for Keytruda in Germany with events?
+When was the last price decrease for Keytruda in Germany with events?
+Compare the price of Keytruda and its key competitors across the EU5?
+Show me the price history for Keytruda in the EU5?
+Whats the current price for Keytruda across the EU5?
+Provide a pricing trend analysis for Nivolumab across the specified countries without breaking out by other ICI products.
+what is IRP matrix by eversana
+where is IRP Matrix located in Navline Database
+where is IRP Matrix located in Navline Database
+Show me the price history for Keytruda in the EU5?
+Whats the current price for Keytruda across the EU5?
+Whats the price of Keytruda in Germany?
+what are the latest decision status for Keytruda in EU5
+whats the price trend with keytruda in germany, show with events
+whats the keytruda price for all countries
+Show me the recent HTA decisions in Germany for Keytruda?
+What is the gross price and net price for Vyvgart Hytrulo in the US?
+Can you give me that in USD?
+Can you update this to include the annual cost of NSCLC?
+What is the annual WAC price for Vyvgart Hytrulo in the US?
+Whats the price of keytruda and its key competitors across the eu5?
+Whats the current price for Opdivo across the EU5?
+which countries are publishing net selling prices or grosstonet discounts?
+Can you update this to include the annual cost of NSCLC?
+Whats the price of keytruda and its key competitors across the eu5?
+Whats the current price for Opdivo across the EU5?
+Whats the current price for Keytruda across the EU5?
+how many countries is maviret reimbursed in for children?
+Whats the current price for Yescarta across the EU5?
+When was the last price decrease for Keytruda in Germany with events?
+Compare the launch price to the current price of Keytruda in the EU5?
+Compare the price of Keytruda and its key competitors across the EU5?
+Show me the price history for Keytruda in the EU5?
+Whats the current price for Keytruda across the EU5?
+Whats the price of Keytruda in Germany?
+Whats the price of keytruda and its key competitors across the eu5?

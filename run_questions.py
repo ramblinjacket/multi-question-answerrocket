@@ -19,7 +19,7 @@ def main():
             status = "✓" if result.success else "✗"
             print(f"{status} Question {i}: {result.question}")
             if result.success:
-                print(f"  Result: {result.result}")
+                print(f"success")
             else:
                 print(f"  Error: {result.error}")
             print()

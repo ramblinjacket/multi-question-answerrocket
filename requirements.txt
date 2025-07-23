@@ -1,1 +1,3 @@
-answerrocket-client==0.2.63
+# AnswerRocket SDK version compatibility
+answerrocket-client==0.2.34  # For AnswerRocket v25.04.9
+# answerrocket-client==0.2.63  # For AnswerRocket v25.08.0
